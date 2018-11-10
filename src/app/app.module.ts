@@ -14,6 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PrivacyStatementComponent } from './footer/privacy-statement/privacy-statement.component';
+import { AlbumComponent } from './gallery/album/album.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { PrivacyStatementComponent } from './footer/privacy-statement/privacy-st
     FooterComponent,
     NavigationBarComponent,
     ProjectsComponent,
-    PrivacyStatementComponent
+    PrivacyStatementComponent,
+    AlbumComponent
   ],
   imports: [
     BrowserModule,
