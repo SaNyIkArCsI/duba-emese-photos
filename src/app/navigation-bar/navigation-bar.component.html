@@ -1,0 +1,31 @@
+<header class="header">
+  <div class="burger">
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+    <div class="burger__patty"></div>
+  </div>
+
+  <nav class="menu">
+    <div class="menu__brand">
+      <a><div class="logo">
+      </div></a>
+    </div>
+    <ul class="menu__list">
+      <li class="menu__item"><a routerLink="/" class="menu__link">Főoldal</a></li>
+      <li class="menu__item"><a routerLink="/gallery" class="menu__link">Galéria</a></li>
+      <li class="menu__item"><a routerLink="/projects" class="menu__link">Projektek</a></li>
+      <li class="menu__item"><a routerLink="/about" class="menu__link">Rólam</a></li>
+      <!--li class="menu__item"><a routerLink="/contact" class="menu__link">Kapcsolat</a></li-->
+      <li class="menu__item">
+        <a href="https://www.facebook.com/DubaEmesePhotos/" target="_blank" class="menu__link menu__link--social">
+          <fa-icon [icon]="faFacebookIcon"></fa-icon>
+        </a>
+      </li>
+      <li class="menu__item">
+        <a href="https://www.instagram.com/emese_duba_photos/" target="_blank" class="menu__link menu__link--social">
+          <fa-icon [icon]="faInstagramIcon"></fa-icon>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
