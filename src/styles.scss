@@ -1,8 +1,24 @@
 /* You can add global styles to this file, and also import other style files */
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
+h1, h2{
+  font-family:"Comic Sans MS", cursive, sans-serif  ;
+}
 body {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
   background: mix(black, #38C5B9, 10);
   color: white;
+  font-size: medium;
+}
+@include tablet {
+  body{
+    font-size: small;
+  }
 }

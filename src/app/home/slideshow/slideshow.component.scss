@@ -1,0 +1,17 @@
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.slideshow{
+  width: 60%;
+  position: relative;
+  left:20%;
+}
+@include tablet {
+  .slideshow{
+    width:100%;
+    left: 0;
+  }
+}

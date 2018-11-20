@@ -4,12 +4,12 @@
   }
 }
 
-$border-radius: 0.7em;
+$border-radius: 0.4em;
 
 
 .album-header {
   cursor: pointer;
-  background-color: black;
+  background-color:  mix(black, #08ffe7, 20);
   color: navajowhite;
   border-radius: $border-radius;
   box-shadow: 0.3em 0.2em 1em #091e24;
@@ -22,6 +22,7 @@ $border-radius: 0.7em;
   footer {
     font-size: 1em;
     text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
   }
 
   img {
@@ -50,18 +51,18 @@ $border-radius: 0.7em;
   align-items: center;
 
   section {
-    background-color: black;
+    background-color:  black;
     margin: 0;
     width: 100%;
     height: 100%;
     header {
       display: inline-block;
-      font-size: 1.5em;
-      padding: 0.5em 1em;
+      font-size: 1em;
+      padding: 0.1em 1em;
       margin: 0;
-      height: 2.7em;
+      height: 2em;
       color: navajowhite;
-      background-color: #091e24;
+      background-color: #020716;
       width: 100%;
       & > * {
         margin: 0;
@@ -69,6 +70,7 @@ $border-radius: 0.7em;
         display: inline-block;
       }
       fa-icon {
+        font-size: 1em;
         cursor: pointer;
         float: right;
         right: 0;
@@ -97,7 +99,7 @@ $border-radius: 0.7em;
       }
 
       fa-icon {
-        font-size: 4em;
+        font-size: 1em;
         color: navajowhite;
         cursor: pointer;
         margin: 0.5em;
@@ -109,7 +111,7 @@ $border-radius: 0.7em;
 @include tablet {
   .album-header {
     footer {
-      font-size: 2em;
+      font-size: 3em;
       text-align: center;
       height: 5%;
     }
@@ -126,7 +128,7 @@ $border-radius: 0.7em;
     margin: 0;
     line-height: 0;
     section {
-      background-color: black;
+      background-color:  black;
       margin: 0;
       width: 100%;
       height: 100%;
@@ -162,7 +164,7 @@ $border-radius: 0.7em;
         }
 
         fa-icon {
-          font-size: 1.5em;
+          font-size: 3em;
           margin: 0.1em;
         }
       }

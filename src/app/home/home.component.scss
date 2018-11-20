@@ -1,0 +1,39 @@
+@mixin tablet {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+.text-box {
+  box-shadow: 0 2vw 4vw 0 rgba(0, 0, 0, 0.5);
+  padding: 1.67vw 2.67vw;
+  position: relative;
+  border-radius: 1vw;
+  left: 10%;
+  width: 80%;
+  margin: 3vw;
+}
+h2{
+  text-align: center;
+}
+
+#first{
+  background-color: mix(black, #2fa1ff, 10);
+}
+#second{
+  background-color: mix(black, #29b2ff, 10);
+}
+#third{
+  background-color: mix(black, #5cc5ff, 10);
+}
+
+@include tablet {
+  .text-box {
+    box-shadow: 0 2vw 4vw 0 rgba(0, 0, 0, 0.5);
+    padding: 1.67vw 2.67vw;
+    position: relative;
+    border-radius: 1vw;
+    left: 0;
+    width: 100%;
+  }
+}
