@@ -16,6 +16,7 @@
 }
 
 .container {
+  margin-left: 0;
   color: black;
   padding: 1vw 3.5vw;
   position: relative;
@@ -28,14 +29,14 @@
     height: 2vw;
     right: -1.5vw;
     background-color: white;
-    border: 0.4vw solid #FF9F55;
+    border: 0.4vw solid #031024;
     top: 1vw;
     border-radius: 50%;
     z-index: 1;
   }
 }
 .left {
-  left: 0;
+  left: -0.5vw;
   &::before {
     content: " ";
     height: 0;
@@ -43,9 +44,9 @@
     top: 1.5vw;
     width: 0;
     z-index: 1;
-    right: 2vw;
+    right: 1vw;
     border: medium solid white;
-    border-width: 0.8vw 0 0.8vw 0.8vw;
+    border-width: 0.9vw 0 0.9vw 0.9vw;
     border-color: transparent transparent transparent white;
   }
 }
@@ -58,9 +59,9 @@
     top: 1.5vw;
     width: 0;
     z-index: 1;
-    left: 2vw;
+    left: 1vw;
     border: medium solid white;
-    border-width: 0.8vw 0.8vw 0.8vw 0;
+    border-width: 0.9vw 0.9vw 0.9vw 0;
     border-color: transparent white transparent transparent;
   }
   &::after {
@@ -93,10 +94,10 @@
   }
 
   .left::after, .right::after {
-    left: 1vw;
+    left: 2vw;
   }
 
   .right {
-    left: 0%;
+    left: 0;
   }
 }
