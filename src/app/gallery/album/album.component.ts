@@ -25,14 +25,35 @@ export class AlbumComponent implements OnInit {
   }
 
   public nextPic() {
-    const image = <HTMLImageElement>this.DOM().getElementsByClassName('image-holder')[0].firstChild;
-    this.currentPicture = (this.currentPicture + 1) % this.album.pictures.length;
-    image.src = this.album.folderName + this.album.pictures[this.currentPicture].url;
+    this.currentPicture = this.getNextPictureIndex();
+    this.setPictureByIndex();
   }
   public prevPic() {
+    this.currentPicture = this.getPrevPictureIndex();
+    this.setPictureByIndex();
+  }
+
+  public getPrevPictureIndex() {
+    return this.currentPicture === 0 ? this.album.pictures.length - 1 : this.currentPicture - 1;
+  }
+  public getNextPictureIndex() {
+    return (this.currentPicture + 1) % this.album.pictures.length;
+  }
+
+  public setPictureByIndex(index: number = this.currentPicture) {
+    this.currentPicture = index;
     const image = <HTMLImageElement>this.DOM().getElementsByClassName('image-holder')[0].firstChild;
-    this.currentPicture = (this.currentPicture === 0 ? this.album.pictures.length - 1 : this.currentPicture - 1);
     image.src = this.album.folderName + this.album.pictures[this.currentPicture].url;
+  }
+
+  public toggleModal() {
+    this.hideAlbumContainer = !this.hideAlbumContainer;
+    const body = <HTMLElement>document.getElementsByTagName('BODY')[0];
+    if (!this.hideAlbumContainer) {
+      body.style.overflow = 'hidden';
+    } else {
+      body.style.overflow = 'auto';
+    }
   }
 
   private DOM(): HTMLElement {
@@ -45,5 +66,4 @@ export class AlbumComponent implements OnInit {
   ngOnInit() {
     this.currentPicture = this.album.defaultPicture;
   }
-
 }

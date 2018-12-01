@@ -1,24 +1,31 @@
 <div id="{{album.id}}">
-  <div class="album-header" (click)="hideAlbumContainer = !hideAlbumContainer">
+  <div class="album-header" (click)="toggleModal()">
     <div>
       <img [src]="album.folderName + album.pictures[album.defaultPicture].url">
     </div>
     <footer>{{album.albumName}}</footer>
   </div>
-  <div [hidden]="hideAlbumContainer">
+  <div *ngIf="!hideAlbumContainer">
     <div class="album-holder">
       <section>
         <header>
           <h1>{{album.albumName}}</h1>
-          <fa-icon [icon]="close" (click)="hideAlbumContainer = !hideAlbumContainer"></fa-icon>
+          <fa-icon [icon]="close" (click)="toggleModal()"></fa-icon>
         </header>
-        <article>
-          <fa-icon [icon]="leftArrow" (click)="prevPic()"></fa-icon>
-          <div class="image-holder">
-            <img src="{{album.folderName + album.pictures[album.defaultPicture].url}}">
-          </div>
-          <fa-icon [icon]="rightArrow" (click)="nextPic()"></fa-icon>
-        </article>
+        <main>
+          <article>
+            <fa-icon [icon]="leftArrow" (click)="prevPic()"></fa-icon>
+            <div class="image-holder">
+              <img [src]="album.folderName + album.pictures[album.defaultPicture].url">
+            </div>
+            <fa-icon [icon]="rightArrow" (click)="nextPic()"></fa-icon>
+          </article>
+          <footer>
+            <div class="thumbnail-list-element-container" *ngFor="let picture of album.pictures; index as i" (click)="setPictureByIndex(i)">
+              <img [src]="album.folderName + picture.url">
+            </div>
+          </footer>
+        </main>
       </section>
     </div>
   </div>
