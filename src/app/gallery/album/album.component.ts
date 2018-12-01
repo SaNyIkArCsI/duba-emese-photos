@@ -20,8 +20,23 @@ export class AlbumComponent implements OnInit {
 
   public hideAlbumContainer: boolean;
 
+  public getThumbnailFileName(fileName: string): string {
+    const splitName: string[] = fileName.split('.');
+    let thumbnailName = '';
+    for (let i = 0; i < splitName.length - 2; i++) {
+      thumbnailName += splitName[i] + '.';
+    }
+    thumbnailName += splitName[splitName.length - 2] + '_tn.' + splitName[splitName.length - 1];
+    console.log(thumbnailName);
+    return thumbnailName;
+  }
+
   constructor() {
     this.hideAlbumContainer = true;
+  }
+
+  ngOnInit() {
+    this.currentPicture = this.album.defaultPicture;
   }
 
   public nextPic() {
@@ -63,7 +78,5 @@ export class AlbumComponent implements OnInit {
     return this.dom;
   }
 
-  ngOnInit() {
-    this.currentPicture = this.album.defaultPicture;
-  }
+  // Always make thumbnails example converter: http://makethumbnails.com/
 }

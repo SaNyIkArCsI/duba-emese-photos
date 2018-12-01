@@ -1,7 +1,7 @@
 <div id="{{album.id}}">
   <div class="album-header" (click)="toggleModal()">
     <div>
-      <img [src]="album.folderName + album.pictures[album.defaultPicture].url">
+      <img [src]="album.folderName + 'thumbnails/' + getThumbnailFileName(album.pictures[album.defaultPicture].url)">
     </div>
     <footer>{{album.albumName}}</footer>
   </div>
@@ -22,7 +22,7 @@
           </article>
           <footer>
             <div class="thumbnail-list-element-container" *ngFor="let picture of album.pictures; index as i" (click)="setPictureByIndex(i)">
-              <img [src]="album.folderName + picture.url">
+              <img [src]="album.folderName + 'thumbnails/' + getThumbnailFileName(picture.url)">
             </div>
           </footer>
         </main>
