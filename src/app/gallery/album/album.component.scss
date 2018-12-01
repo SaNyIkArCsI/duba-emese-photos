@@ -1,8 +1,4 @@
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "../../design-environments";
 
 $border-radius: 0.4em;
 
@@ -36,7 +32,7 @@ $border-radius: 0.4em;
 .album-holder {
   position: fixed;
   clear: both;
-  z-index: 6;
+  z-index: 30;
   top: 0;
   left: 0;
   width: 100%;
@@ -60,7 +56,7 @@ $border-radius: 0.4em;
       font-size: 1em;
       padding: 0.1em 1em;
       margin: 0;
-      height: 2em;
+      height: 3em;
       color: navajowhite;
       background-color: #020716;
       width: 100%;
@@ -108,7 +104,7 @@ $border-radius: 0.4em;
   }
 }
 
-@include tablet {
+@include mobile {
   .album-header {
     footer {
       font-size: 3em;
@@ -135,7 +131,7 @@ $border-radius: 0.4em;
       header {
         font-size: 1em;
         margin: 0;
-        height: 3em;
+        height: 80px;
         width: 100%;
         h1 {
           padding: 15px;

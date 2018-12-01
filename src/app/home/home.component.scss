@@ -1,8 +1,4 @@
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "../design-environments";
 
 .text-box {
   box-shadow: 0 2vw 4vw 0 rgba(0, 0, 0, 0.5);
@@ -27,7 +23,7 @@ h2{
   background-color: mix(black, #5cc5ff, 10);
 }
 
-@include tablet {
+@include mobile {
   .text-box {
     box-shadow: 0 2vw 4vw 0 rgba(0, 0, 0, 0.5);
     padding: 1.67vw 2.67vw;

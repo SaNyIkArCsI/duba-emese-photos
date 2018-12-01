@@ -1,0 +1,11 @@
+$primary-color: #38C5B9;
+
+@mixin easeOut {
+  transition: all 1.5s cubic-bezier(0.23, 1, 0.32, 1)
+}
+
+@mixin mobile {
+  @media screen and (max-width: 768px) {
+    @content;
+  }
+}

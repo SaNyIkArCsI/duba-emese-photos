@@ -1,9 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "app/design-environments";
 
 * {
   box-sizing: border-box;
@@ -17,7 +13,7 @@ body {
   color: white;
   font-size: medium;
 }
-@include tablet {
+@include mobile {
   body{
     font-size: small;
   }

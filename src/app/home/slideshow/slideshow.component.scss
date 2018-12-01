@@ -1,15 +1,11 @@
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "../../design-environments";
 
 .slideshow{
   width: 60%;
   position: relative;
   left:20%;
 }
-@include tablet {
+@include mobile {
   .slideshow{
     width:100%;
     left: 0;

@@ -1,8 +1,4 @@
-@mixin tablet {
-  @media screen and (max-width: 768px) {
-    @content;
-  }
-}
+@import "../design-environments";
 
 .flex-container {
   display: flex;
@@ -26,7 +22,7 @@
   }
 }
 
-@include tablet {
+@include mobile {
 
   .flex-container {
     flex-direction: column;
